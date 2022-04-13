@@ -6,9 +6,13 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     font-family: 'Anek Tamil', sans-serif;
     font-size: 18px;
+    color:white;
     background:url(${gold}); 
     background-size: cover;
     @media screen and (max-width: 1200px){

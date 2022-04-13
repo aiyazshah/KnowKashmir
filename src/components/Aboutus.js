@@ -6,7 +6,7 @@ import snow from '../img/snow.jpg'
 
 export default function Aboutus() {
     return (
-        <Sec>
+        <Sec id="home">
             <Content>
                 <div>
                     <h3>Our Mission</h3>
@@ -50,7 +50,8 @@ p{
     width:80%;
 }
 h3{
-    text-align: center;
+    margin-left:1rem;
+
   
 }
 img{

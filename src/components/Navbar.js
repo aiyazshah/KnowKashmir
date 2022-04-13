@@ -21,10 +21,9 @@ export default function Navbar() {
             </Burger>
             <NavList toggle={toggle}>
                 <li className='logo'><GiMountains size={55} /></li>
-                <li><a href="home" >Home</a></li>
-                <li><a href="about" >About</a></li>
-                <li><a href="Services" >Services</a></li>
-                <li><a href="contactus" >Contact Us</a></li>
+                <li><a href="#home" >Home</a></li>
+                <li><a href="#services" >Services</a></li>
+                <li><a href="#contactus" >Contact Us</a></li>
             </NavList>
 
 
@@ -32,6 +31,7 @@ export default function Navbar() {
             <Search toggle={toggle}>
                 <label htmlFor="search">
                     {toggle ? <FaSearch size={20} fontWeight="light" /> : null}
+                    <FaSearch className='search' size={20} fontWeight="light" />
                 </label>
                 <input type="text" name='search' id='search' placeholder='  Search' />
 
@@ -48,6 +48,8 @@ justify-content: space-around;
 align-items: center;
 background: url(${gold});
 background-size: cover;
+position: sticky;
+top:0px;
 .mountains{
     color: white; 
     display: none;
@@ -110,10 +112,11 @@ input{
     @media screen and (max-width: 660px){
         display: ${props => props.toggle ? "flex" : "none"};
       }
-    label{
-
+}
+.search{
+    @media screen and (max-width:660px){
+        display: none;
     }
-   
 }
 `
 const Burger = styled.div`
